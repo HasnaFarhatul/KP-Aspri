@@ -65,7 +65,7 @@
     border: 1px solid rgb(255, 255, 255);
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0);
-    color: white;
+    color: white !important;
     outline: none;
 }
 
@@ -77,4 +77,38 @@
     width: 20px;
     height: 20px;
     pointer-events: none;
+}
+
+.menu-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    margin-top: 70px;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.menu-items {
+    display: flex;
+    overflow: hidden;
+    max-width: 500px;
+    transition: max-width 0.3s ease;
+}
+
+.menu-items a {
+    margin-left: 10px;
+}
+
+.menu-items a img {
+    width: 40px;
+    height: 40px;
 }
