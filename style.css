@@ -113,7 +113,7 @@ body {
     padding: 10px 45px 10px 15px;
     border: 1px solid rgb(255, 255, 255);
     border-radius: 20px;
-    background-color: rgb(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0);
     color: white;
     outline: none;
 }
@@ -149,7 +149,7 @@ body {
 .menu-items {
     display: flex;
     overflow: hidden;
-    max-width: 500px;
+    max-width: 0;
     transition: max-width 0.3s ease;
 }
 
@@ -184,4 +184,4 @@ body {
     height: 480px;
 }
 
-/* Detail Profile */
+/* Detail Profil */
