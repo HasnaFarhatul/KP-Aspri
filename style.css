@@ -144,6 +144,7 @@ body {
     font-size: 24px;
     color: white;
     cursor: pointer;
+    height: 40px;
 }
 
 .menu-items {
@@ -151,6 +152,9 @@ body {
     overflow: hidden;
     max-width: 0;
     transition: max-width 0.3s ease;
+    padding: 10px;
+    border-radius: 8px;
+    gap: 10px;
 }
 
 .menu-items a {
