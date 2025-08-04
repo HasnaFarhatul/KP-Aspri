@@ -27,15 +27,59 @@
         <button class="menu-toggle" onclick="toggleMenu()"><img src="../foto/menu.png"/></button>
         <div class="menu-items" id="menuItems">
             <a href="dashboard.html"><img src="../foto/Home.png" alt="Home" title="Dashboard" /></a>
-            <a href="jukir.html"><img src="../foto/accessibility.png" alt="Profile" title="Juru Parkit"/></a>
+            <a href="jukir.html"><img src="../foto/accessibility.png" alt="Profile" title="Juru Parkir"/></a>
             <a href="KRinput.html"><img src="../foto/Check circle.png" alt="Logout" title="Kasbon Retribusi"/></a>
             <a href="pemsurattugas.html"><img src="../foto/File.png" alt="Logout" title="Pembuatan Surat Tugas"/></a>
-            <a href="#"><img src="../foto/Book open.png" alt="Logout" title=""/></a>
-            <a href="../Admin/datajukir.html"><img src="../foto/User plus.png" alt="Logout" title="Data Juru Parkir"/></a>
-            <a href="../Admin/datapengguna.html"><img src="../foto/Users.png" alt="Logout" title="Data Pengguna"/></a>
-            <a href="../Admin/recapdata.html"><img src="../foto/Clipboard.png" alt="Logout" title="Recap Data"/></a>
-            <a href="../Admin/datalokasi.html"><img src="../foto/location_on.png" alt="Logout" title="Data Lokasi"/></a>
+            <div class="dropdown">
+                <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="../foto/Book open.png" alt="Laporan Pendapatan" title="Laporan Pendapatan"/>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+            <a href="../Admin/datajukir.html"><img src="../foto/User plus.png" alt="Data Juru Parkir" title="Data Juru Parkir"/></a>
+            <a href="../Admin/datapengguna.html"><img src="../foto/Users.png" alt="Data Pengguna" title="Data Penggunaaaaa"/></a>
+            <a href="../Admin/recapdata.html"><img src="../foto/Clipboard.png" alt="Recap Data" title="Recap Data"/></a>
+            <a href="../Admin/datalokasi.html"><img src="../foto/location_on.png" alt="Data Lokasi" title="Data Lokasi"/></a>
         </div>
+    </div>
+    <div class="mt-custom">
+        <div class="text-center fw-bold mt-5 mb-3 fs-3">Statistik Pendapatan</div>
+        <div class="card-section border mx-5">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="gradient-box w-100"></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="gradient-box w-100"></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="gradient-box w-100"></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="gradient-box w-100"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="text-center fw-bold mt-5 mb-3 fs-3">Statistik Data Parkir</div>
+        <div class="card-section d-flex justify-content-between border mx-5">
+            <div class="gradient-box-small flex-fill me-2"></div>
+            <div class="gradient-box-small flex-fill mx-2"></div>
+            <div class="gradient-box-small flex-fill ms-2"></div>
+        </div>
+    </div>
+    <h5 class="text-center fw-bold mt-5 mb-3 fs-3">Grafik Pendapatan Ruas Jalan</h5>
+    <div class="chart-box w-80 d-flex align-items-end justify-content-around p-3 border mx-5">
+        <div class="bar" style="height: 60%;"></div>
+        <div class="bar" style="height: 80%;"></div>
+        <div class="bar" style="height: 40%;"></div>
+        <div class="bar" style="height: 90%;"></div>
+        <div class="bar" style="height: 70%;"></div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../script.js"></script>
