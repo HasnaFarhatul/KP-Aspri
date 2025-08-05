@@ -209,3 +209,47 @@ body {
   font-size: 0.75rem;
   padding: 0.3rem 0.6rem;
 }
+
+/*buktisetoran */
+ .info-container {
+    width: 400px; /* Atur sesuai kebutuhan, bisa juga 100% */
+    margin: 0 auto; /* Tengahin container */
+    font-family: Arial, sans-serif;
+  }
+
+  .info-row {
+  display: flex;
+  padding: 4px 0;
+  justify-content: center; 
+}
+
+  .label-info {
+    width: 140px; /* Lebar tetap untuk semua label */
+    font-weight: 600;
+    text-align: left;
+    padding-right: 8px;
+    white-space: nowrap; /* Biar label gak pecah ke baris baru */
+  }
+
+  .value-info {
+    flex-grow: 1; /* Isi mengambil sisa ruang */
+    text-align: left;
+    word-wrap: break-word; /* Biar teks isi bisa wrap ke baris baru */
+  }
+
+   .btn-custom-purple {
+    background-color: #737ECF;
+    color: white;
+    border: none;
+    margin-right: 10px; /* jarak kanan antar tombol */
+  }
+  .btn-custom-purple:last-child {
+    margin-right: 0; /* tombol terakhir tidak perlu margin kanan */
+  }
+  .btn-custom-purple:hover {
+    background-color: #5c68b0;
+  }
+
+
+
+
