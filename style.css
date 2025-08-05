@@ -249,6 +249,60 @@ body {
     color: #4b7bec;
 }
 
+/* setoran harian */
+.container-box {
+    background-color: #bfc8e5;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+.btn-filter {
+    background-color: white;
+    border-radius: 20px;
+    padding: 6px 18px;
+    font-weight: 500;
+    border: none;
+    margin-right: 8px;
+}
+
+.btn-filter.active {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #4b7bec;
+}
+
+.btn-cari {
+    background-color: #5a6bdf;
+    color: white;
+    border-radius: 20px;
+    padding: 6px 20px;
+    border: none;
+}
+
+.badge-kasbon {
+    background-color: #5a6bdf;
+    color: white;
+    border-radius: 12px;
+    padding: 4px 12px;
+    font-size: 0.8rem;
+}
+
+thead {
+    background-color: transparent;
+}
+
+.badge-kasbon {
+    background-color: #5a6bdf;
+    color: white;
+    border-radius: 12px;
+    padding: 4px 12px;
+    font-size: 0.8rem;
+}
+
+td, th {
+    vertical-align: middle;
+}
+
 /* Jukir */
 .card-title {
     font-size: 0.95rem;
@@ -266,6 +320,39 @@ body {
 .btn-sm {
     font-size: 0.75rem;
     padding: 0.3rem 0.6rem;
+}
+
+/* data jukir */
+.table-container {
+    background-color: #bcc5e0;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.btn-custom {
+    border-radius: 20px;
+    font-size: 14px;
+    padding: 5px 15px;
+}
+
+.btn-detail {
+    background-color: #657ed4;
+    color: white;
+}
+
+.btn-hapus {
+    background-color: #adb5bd;
+    color: white;
+}
+
+.btn-edit {
+    background-color: #7d7bc1;
+    color: white;
+}
+
+th {
+    font-weight: 600;
 }
 
 /*buktisetoran */
