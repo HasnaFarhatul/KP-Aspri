@@ -535,3 +535,80 @@ body {
       border-radius: 15px;
       padding: 4px 10px;
     }
+
+    /* data pengguna*/
+    
+    .main-container {
+      background-color: #b8c7e6;
+      margin: 40px auto;
+      padding: 30px 40px;
+      border-radius: 20px;
+      max-width: 900px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    h4 {
+      text-align: center;
+      font-weight: 700;
+      color: #4a4f78;
+      margin-bottom: 30px;
+    }
+
+    .btn-custom {
+      border-radius: 25px;
+      padding: 8px 20px;
+      font-size: 14px;
+      background-color: #6c78d8;
+      color: #fff;
+      border: none;
+    }
+
+    .btn-custom:hover {
+      background-color: #5c69c0;
+    }
+
+    .btn-action {
+      padding: 5px 15px;
+      font-size: 13px;
+      border-radius: 20px;
+    }
+
+    .btn-edit {
+      background-color: #6c78d8;
+      color: white;
+      border: none;
+    }
+
+    .btn-delete {
+      background-color: #fff;
+      color: #6c78d8;
+      border: 1px solid #6c78d8;
+    }
+
+    .btn-edit:hover {
+      background-color: #5c69c0;
+    }
+
+    .btn-delete:hover {
+      background-color: #dbe0fa;
+    }
+
+    .table-rounded td, .table-rounded th {
+      vertical-align: middle;
+    }
+
+    .form-control {
+      border-radius: 25px;
+      font-size: 14px;
+    }
+
+    .search-group {
+      display: flex;
+      justify-content: end;
+      gap: 10px;
+    }
+
+    .table > tbody > tr > td:first-child,
+    .table > tbody > tr > td {
+      border-top: none;
+    }
