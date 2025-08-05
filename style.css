@@ -330,6 +330,61 @@ body {
       background-color: #5e69b0;
     }
 
+    /*KRtampilan */
+      .main-card {
+      background-color: #cfd5f0;
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .title {
+      text-align: center;
+      font-weight: 700;
+      color: #3f4781;
+      margin-bottom: 30px;
+    }
+
+    .table thead {
+      color: #5c5f8e;
+    }
+
+    .badge-status {
+      border-radius: 10px;
+      padding: 5px 15px;
+      font-weight: 500;
+    }
+
+    .belum-lunas {
+      background-color: #6d73a0;
+      color: white;
+    }
+
+    .lunas {
+      background-color: #737ecf;
+      color: white;
+    }
+
+    .table-container {
+      overflow-x: auto;
+    }
+
+    .btn-back {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 24px;
+      color: #5c5f8e;
+      background: none;
+      border: none;
+    }
+
+    .btn-back:hover {
+      color: #3f4781;
+    }
+
     
 
 
