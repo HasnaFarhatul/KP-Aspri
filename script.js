@@ -71,3 +71,73 @@ function changeMonth(offset) {
     renderCalendar();
 }
 renderCalendar();
+
+//setoran harian
+const dataPendapatan = [
+    { no: 1, tanggal: "2025-07-14 10:48:37", trx: "ASPRI-5162", kolektor: "Muksin", juru: "Uloh Saepuloh", jumlah: "Rp.100.000" },
+    { no: 2, tanggal: "2025-08-05 09:00:00", trx: "ASPRI-5163", kolektor: "Muksin", juru: "Uloh Saepuloh", jumlah: "Rp.100.000" },
+    { no: 3, tanggal: "2025-08-01 12:30:00", trx: "ASPRI-5164", kolektor: "Muksin", juru: "Uloh Saepuloh", jumlah: "Rp.100.000" },
+    { no: 4, tanggal: "2025-08-05 14:00:00", trx: "ASPRI-5165", kolektor: "Muksin", juru: "Uloh Saepuloh", jumlah: "Rp.100.000" },
+];
+function renderTable(filteredData) {
+    const tbody = document.getElementById("dataTable");
+    tbody.innerHTML = "";
+    filteredData.forEach(item => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+            <td>${item.no}</td>
+            <td>${formatDateTime(item.tanggal)}</td>
+            <td>${item.trx}</td>
+            <td>${item.kolektor}</td>
+            <td>${item.juru}</td>
+            <td>${item.jumlah} <span class="badge badge-kasbon ms-2">Kasbon</span></td>
+        `;
+        tbody.appendChild(tr);
+    });
+}
+function formatDateTime(dateTimeStr) {
+    const date = new Date(dateTimeStr);
+    return date.toLocaleDateString('id-ID') + " " + date.toLocaleTimeString('id-ID');
+}
+function filterData(type) {
+    document.querySelectorAll('.btn-filter').forEach(btn => btn.classList.remove('active'));
+    if (type === 'all') document.querySelector('.btn-filter:nth-child(1)').classList.add('active');
+    if (type === 'today') document.querySelector('.btn-filter:nth-child(2)').classList.add('active');
+    if (type === 'month') document.querySelector('.btn-filter:nth-child(3)').classList.add('active');
+
+    const today = new Date();
+    let filtered = [];
+
+    if (type === 'all') {
+        filtered = dataPendapatan;
+    } else if (type === 'today') {
+        filtered = dataPendapatan.filter(item => {
+          const date = new Date(item.tanggal);
+          return date.toDateString() === today.toDateString();
+        });
+      } else if (type === 'month') {
+        filtered = dataPendapatan.filter(item => {
+          const date = new Date(item.tanggal);
+          return (
+            date.getMonth() === today.getMonth() &&
+            date.getFullYear() === today.getFullYear()
+          );
+        });
+      }
+
+    renderTable(filtered);
+}
+
+function filterDataByDate() {
+    const selectedDate = document.getElementById("dateInput").value;
+    if (!selectedDate) return;
+
+    const filtered = dataPendapatan.filter(item => {
+        return item.tanggal.startsWith(selectedDate);
+    });
+
+    renderTable(filtered);
+    document.querySelectorAll('.btn-filter').forEach(btn => btn.classList.remove('active'));
+    }
+    
+    filterData('all');
