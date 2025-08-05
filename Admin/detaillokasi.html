@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link href="../style.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar login-background bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand logo-img">
+                <img src="../foto/LogoAspri.png" alt="Aspri"/>
+            </a>
+            <form class="justify-content-center search-form" role="search">
+                <input class="search-input text-white" type="search" placeholder="Cari" aria-label="Search" />
+                <img src="../foto/search.png" alt="Search" class="search-icon" />
+            </form>
+            <a href="detailprof.html">
+                <img src="../foto/Logoprofile2.png" Alt="Lihat Profil" title="Lihat Profile"/>
+            </a>
+        </div>
+    </nav>
+    <div class="menu-container">
+        <button class="menu-toggle" onclick="toggleMenu()"><img src="../foto/menu.png"/></button>
+        <div class="menu-items" id="menuItems">
+            <a href="dashboard.html"><img src="../foto/Home.png" alt="Home" title="Dashboard" /></a>
+            <a href="jukir.html"><img src="../foto/accessibility.png" alt="Profile" title="Juru Parkit"/></a>
+            <a href="KRinput.html"><img src="../foto/Check circle.png" alt="Logout" title="Kasbon Retribusi"/></a>
+            <a href="pemsurattugas.html"><img src="../foto/File.png" alt="Logout" title="Pembuatan Surat Tugas"/></a>
+            <a href="#"><img src="../foto/Book open.png" alt="Logout" title=""/></a>
+            <a href="../Admin/datajukir.html"><img src="../foto/User plus.png" alt="Logout" title="Data Juru Parkir"/></a>
+            <a href="../Admin/datapengguna.html"><img src="../foto/Users.png" alt="Logout" title="Data Pengguna"/></a>
+            <a href="../Admin/recapdata.html"><img src="../foto/Clipboard.png" alt="Logout" title="Recap Data"/></a>
+            <a href="../Admin/datalokasi.html"><img src="../foto/location_on.png" alt="Logout" title="Data Lokasi"/></a>
+        </div>
+    </div>
+
+ <div class="container py-5">
+    <h4 class="title">Detail Lokasi</h4>
+    <div class="card-custom">
+      <div class="row mb-3">
+        <div class="col-md-4 label">Nama Lokasi</div>
+        <div class="col-md-8">: Jl. KHZ. Mustofa</div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-4 label">ID Lokasi</div>
+        <div class="col-md-8">: LOC-001</div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-4 label">Kapasitas Parkir</div>
+        <div class="col-md-8">: Motor : 100 unit, Mobil : 40 unit</div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-4 label">Alamat Lengkap</div>
+        <div class="col-md-8">: Jl. HZ Mustofa No.12, Kecamatan Cihideung</div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-4 label">Status Lokasi</div>
+        <div class="col-md-8">: Aktif</div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-4 label">Tanggal Lokasi Ditambahkan</div>
+        <div class="col-md-8">: 05 Juni 2025</div>
+ </div>
+      <div class="row mb-3">
+        <div class="col-md-4 label">Total Transaksi Bulan Ini</div>
+        <div class="col-md-8">: Rp 2.450.000</div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 label">Riwayat Kolektor yang Pernah Bertugas</div>
+        <div class="col-md-8">
+          : Asep Supriatna (2025-06-01 s.d 2025-07-30)<br>
+          &nbsp;&nbsp;Rudi Gunawan (2025-04-01 s.d 2025-05-31)<br>
+          &nbsp;&nbsp;Deni Maulana (2025-01-01 s.d 2025-03-31)
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
