@@ -4,7 +4,7 @@ let isMenuOpen = false;
 function toggleMenu() {
 const menu = document.getElementById("menuItems");
 isMenuOpen = !isMenuOpen;
-menu.style.maxWidth = isMenuOpen ? "550px" : "0";
+menu.style.maxWidth = isMenuOpen ? "600px" : "0";
 }
 
 //lupa password

@@ -166,26 +166,46 @@ body {
     height: 40px;
 }
 
-.hr {
-    margin-top: 100px; 
-    text-align: center;
-    font-size: larger;
-    color: rgb(84, 90, 134);
+.card-section {
+    border-radius: 12px;
+    background-color: #e0e0e0;
+    padding: 20px;
+    margin-bottom: 40px;
 }
 
-.box {
-    width: 82%;       
-    height: 700px;    
-    background-color: rgb(182, 191, 221);
-    border-radius: 10px;
-    margin: 0 auto;     
-    padding: 20px;     
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+.gradient-box {
+    border-radius: 12px;
+    height: 100px;
+    background: linear-gradient(to bottom, #00385a, #6c7a89);
 }
 
-.column1 {
-    background-image: url(foto/Bg2.png);
-    height: 480px;
+.gradient-box-small {
+    border-radius: 12px;
+    height: 80px;
+    background: linear-gradient(to right, #00385a, #6c7a89);
+}
+
+.chart-box {
+    height: 200px;
+    background-color: #ddd;
+    border-radius: 12px;
+    margin-bottom: 80px;
+}
+
+.bar {
+    width: 30px;
+    background: linear-gradient(to top, #00385a, #6c7a89);
+    border-radius: 6px 6px 0 0;
+    transition: 0.3s ease;
+}
+
+.bar:hover {
+    opacity: 0.8;
+    transform: scaleY(1.05);
+}
+
+.mt-custom {
+    margin-top: 100px;
 }
 
 /* Detail Profil */
