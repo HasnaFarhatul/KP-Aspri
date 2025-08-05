@@ -673,3 +673,48 @@ body {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+
+/*input lokasi*/
+
+    .form-wrapper {
+      background-color: #bfc9eb;
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 700px;
+      margin: 40px auto;
+      box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .form-label {
+      color: #888;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    .form-control, .form-select {
+      border-radius: 50px;
+      border: none;
+      padding: 10px 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .form-control:focus, .form-select:focus {
+      box-shadow: 0 0 0 0.15rem rgba(122,131,220,.25);
+    }
+
+    .btn-simpan {
+      background-color: #7a83dc;
+      color: white;
+      padding: 10px 40px;
+      border: none;
+      border-radius: 50px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .title {
+      text-align: center;
+      font-weight: bold;
+      color: #4b3a45;
+      margin-top: 40px;
+    }
+  
