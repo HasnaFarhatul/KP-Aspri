@@ -355,6 +355,36 @@ th {
     font-weight: 600;
 }
 
+/* data lokasi*/
+#map {
+    height: 400px;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.table-section {
+    background-color: #f0f2fa;
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+
+.status-btn {
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 13px;
+    color: white;
+    border: none;
+}
+
+.aktif { 
+    background-color: #657ed4; 
+}
+
+.tidak-aktif { 
+    background-color: #d9534f;
+}
+
 /*buktisetoran */
  .info-container {
     width: 400px; /* Atur sesuai kebutuhan, bisa juga 100% */
