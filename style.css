@@ -588,3 +588,23 @@ body {
       gap: 20px;
       margin-top: 25px;
     }
+
+    /*detail lokasi*/
+    body {
+     background-color: #e3e8f7;
+    }
+      .card-custom {
+      background-color: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .title {
+      font-weight: bold;
+      color: #4e5bb0;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .label {
+      font-weight: 500;
+    }
