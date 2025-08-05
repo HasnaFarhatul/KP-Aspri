@@ -270,6 +270,68 @@ body {
     background-color: #5c68b0;
   }
 
+  /*KRinput */
+   .main-form {
+      background-color: #cfd5f0;
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h4.title {
+      color: #3f4781;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    h4.title::after {
+      content: '';
+      width: 50px;
+      height: 3px;
+      background-color: #737ecf;
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 10px;
+    }
+
+    .form-control, .form-select {
+      border-radius: 20px;
+      padding: 10px 20px;
+      background-color: #f3f4f7;
+      border: none;
+    }
+
+    .form-control:focus, .form-select:focus {
+      box-shadow: 0 0 0 0.2rem rgba(115, 126, 207, 0.25);
+    }
+
+    textarea.form-control {
+      border-radius: 15px;
+      height: 100px;
+      resize: none;
+    }
+
+    .btn-submit {
+      background-color: #737ecf;
+      color: white;
+      border-radius: 20px;
+      padding: 10px 30px;
+      border: none;
+      display: block;
+      margin: 30px auto 0 auto;
+    }
+
+    .btn-submit:hover {
+      background-color: #5e69b0;
+    }
+
+    
 
 
 
