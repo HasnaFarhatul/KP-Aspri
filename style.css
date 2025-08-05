@@ -210,24 +210,23 @@ body {
 
 /* Detail Profil */
 
-
 /* Jukir */
 .card-title {
-  font-size: 0.95rem;
+    font-size: 0.95rem;
 }
 
 .card p,
 .card .fw-semibold {
-  font-size: 0.85rem;
+    font-size: 0.85rem;
 }
 
 .progress {
-  font-size: 0.7rem;
+    font-size: 0.7rem;
 }
 
 .btn-sm {
-  font-size: 0.75rem;
-  padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
 }
 
 /*buktisetoran */
