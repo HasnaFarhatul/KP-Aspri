@@ -10,7 +10,7 @@ menu.style.maxWidth = isMenuOpen ? "600px" : "0";
 //kalender
 const bulan = [
     { nama: "JULI 2025", jumlahHari: 31, mulaiHari: 1 },
-    { nama: "AGUSTUS 2025", jumlahHari: 31, mulaiHari: 5 }, // Jumat
+    { nama: "AGUSTUS 2025", jumlahHari: 31, mulaiHari: 5 }, 
     { nama: "SEPTEMBER 2025", jumlahHari: 30, mulaiHari: 0 }
 ];
 const pendapatanData = {
