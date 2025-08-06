@@ -671,3 +671,83 @@ th {
     .label {
       font-weight: 500;
     }
+
+    /*data pengguna aplikasi*/
+     .table-wrapper {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: 40px auto;
+      box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+    }
+
+    h4.title {
+      text-align: center;
+      margin-top: 40px;
+      font-weight: bold;
+      color: #4b3a45;
+    }
+
+    table {
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .table thead {
+      background-color: #e5ebfb;
+    }
+
+    .table-striped tbody tr:nth-of-type(odd) {
+      background-color: #f5f7fd;
+    }
+  .btn-edit {
+      background-color: #5a69e6;
+      color: white;
+      border-radius: 20px;
+      padding: 5px 20px;
+      border: none;
+    }
+
+    .btn-hapus {
+      background-color: #737ECF;
+      color: white;
+      border-radius: 20px;
+      padding: 5px 20px;
+      border: none;
+    }
+
+    th, td {
+      vertical-align: middle;
+      text-align: center;
+    }
+
+    /*detail rekap data*/
+      .title {
+      text-align: center;
+      font-weight: bold;
+      color: #4b3a9b;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    .detail-box {
+      background-color: #bcc7f3;
+      color: #333;
+      border-radius: 20px;
+      padding: 10px 20px;
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .detail-label {
+      font-weight: 500;
+    }
+
+    .container-box {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 20px;
+    }
