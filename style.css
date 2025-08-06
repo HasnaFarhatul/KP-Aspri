@@ -724,3 +724,33 @@ th {
       vertical-align: middle;
       text-align: center;
     }
+
+    /*detail rekap data*/
+      .title {
+      text-align: center;
+      font-weight: bold;
+      color: #4b3a9b;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    .detail-box {
+      background-color: #bcc7f3;
+      color: #333;
+      border-radius: 20px;
+      padding: 10px 20px;
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .detail-label {
+      font-weight: 500;
+    }
+
+    .container-box {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 20px;
+    }
