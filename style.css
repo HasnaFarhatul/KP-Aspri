@@ -333,8 +333,8 @@ th {
 
 /*buktisetoran */
  .info-container {
-    width: 400px; /* Atur sesuai kebutuhan, bisa juga 100% */
-    margin: 0 auto; /* Tengahin container */
+    width: 400px; 
+    margin: 0 auto;
     font-family: Arial, sans-serif;
   }
 
@@ -345,27 +345,27 @@ th {
 }
 
   .label-info {
-    width: 140px; /* Lebar tetap untuk semua label */
+    width: 140px; 
     font-weight: 600;
     text-align: left;
     padding-right: 8px;
-    white-space: nowrap; /* Biar label gak pecah ke baris baru */
+    white-space: nowrap; 
   }
 
   .value-info {
-    flex-grow: 1; /* Isi mengambil sisa ruang */
+    flex-grow: 1; 
     text-align: left;
-    word-wrap: break-word; /* Biar teks isi bisa wrap ke baris baru */
+    word-wrap: break-word; 
   }
 
    .btn-custom-purple {
     background-color: #737ECF;
     color: white;
     border: none;
-    margin-right: 10px; /* jarak kanan antar tombol */
+    margin-right: 10px; 
   }
   .btn-custom-purple:last-child {
-    margin-right: 0; /* tombol terakhir tidak perlu margin kanan */
+    margin-right: 0; 
   }
   .btn-custom-purple:hover {
     background-color: #5c68b0;
