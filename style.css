@@ -332,11 +332,11 @@ th {
 }
 
 /*buktisetoran */
- .info-container {
-    width: 400px; /* Atur sesuai kebutuhan, bisa juga 100% */
-    margin: 0 auto; /* Tengahin container */
+.info-container {
+    width: 400px;
+    margin: 0 auto; 
     font-family: Arial, sans-serif;
-  }
+}
 
   .info-row {
   display: flex;
@@ -344,490 +344,535 @@ th {
   justify-content: center; 
 }
 
-  .label-info {
-    width: 140px; /* Lebar tetap untuk semua label */
+.label-info {
+    width: 140px;
     font-weight: 600;
     text-align: left;
     padding-right: 8px;
-    white-space: nowrap; /* Biar label gak pecah ke baris baru */
-  }
+    white-space: nowrap; 
+}
 
-  .value-info {
-    flex-grow: 1; /* Isi mengambil sisa ruang */
+.value-info {
+    flex-grow: 1; 
     text-align: left;
-    word-wrap: break-word; /* Biar teks isi bisa wrap ke baris baru */
-  }
+    word-wrap: break-word;
+}
 
-   .btn-custom-purple {
+.btn-custom-purple {
     background-color: #737ECF;
     color: white;
     border: none;
-    margin-right: 10px; /* jarak kanan antar tombol */
-  }
-  .btn-custom-purple:last-child {
-    margin-right: 0; /* tombol terakhir tidak perlu margin kanan */
-  }
-  .btn-custom-purple:hover {
+    margin-right: 10px; 
+}
+
+.btn-custom-purple:last-child {
+    margin-right: 0; 
+}
+
+.btn-custom-purple:hover {
     background-color: #5c68b0;
-  }
+}
 
-  /*KRinput */
-   .main-form {
-      background-color: #cfd5f0;
-      border-radius: 15px;
-      padding: 30px;
-      max-width: 600px;
-      margin: auto;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
+/*KRinput */
+.main-form {
+    background-color: #cfd5f0;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-    h4.title {
-      color: #3f4781;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 30px;
-      position: relative;
-    }
+h4.title {
+    color: #3f4781;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
 
-    h4.title::after {
-      content: '';
-      width: 50px;
-      height: 3px;
-      background-color: #737ecf;
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      border-radius: 10px;
-    }
+h4.title::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background-color: #737ecf;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
 
-    .form-control, .form-select {
-      border-radius: 20px;
-      padding: 10px 20px;
-      background-color: #f3f4f7;
-      border: none;
-    }
+.form-control, .form-select {
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: #f3f4f7;
+    border: none;
+}
 
-    .form-control:focus, .form-select:focus {
-      box-shadow: 0 0 0 0.2rem rgba(115, 126, 207, 0.25);
-    }
+.form-control:focus, .form-select:focus {
+    box-shadow: 0 0 0 0.2rem rgba(115, 126, 207, 0.25);
+}
 
-    textarea.form-control {
-      border-radius: 15px;
-      height: 100px;
-      resize: none;
-    }
+textarea.form-control {
+    border-radius: 15px;
+    height: 100px;
+    resize: none;
+}
 
-    .btn-submit {
-      background-color: #737ecf;
-      color: white;
-      border-radius: 20px;
-      padding: 10px 30px;
-      border: none;
-      display: block;
-      margin: 30px auto 0 auto;
-    }
+.btn-submit {
+    background-color: #737ecf;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 30px;
+    border: none;
+    display: block;
+    margin: 30px auto 0 auto;
+}
 
-    .btn-submit:hover {
-      background-color: #5e69b0;
-    }
+.btn-submit:hover {
+    background-color: #5e69b0;
+}
 
-    /*KRtampilan */
-    .title {
-      text-align: center;
-      font-weight: 700;
-      color: #3f4781;
-      margin-bottom: 30px;
-    }
+/*KRtampilan */
+.title {
+    text-align: center;
+    font-weight: 700;
+    color: #3f4781;
+    margin-bottom: 30px;
+}
 
-    .table thead {
-      color: #5c5f8e;
-    }
+.table thead {
+    color: #5c5f8e;
+}
 
-    .badge-status {
-      border-radius: 10px;
-      padding: 5px 15px;
-      font-weight: 500;
-    }
+.badge-status {
+    border-radius: 10px;
+    padding: 5px 15px;
+    font-weight: 500;
+}
 
-    .belum-lunas {
-      background-color: #6d73a0;
-      color: white;
-    }
+.belum-lunas {
+    background-color: #6d73a0;
+    color: white;
+}
 
-    .lunas {
-      background-color: #737ecf;
-      color: white;
-    }
+.lunas {
+    background-color: #737ecf;
+    color: white;
+}
 
-    .table-container {
-      overflow-x: auto;
-    }
+.table-container {
+    overflow-x: auto;
+}
 
+/*input lokasi*/
+.form-wrapper {
+    background-color: #bfc9eb;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 700px;
+    margin: 40px auto;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+}
 
-    /*input lokasi*/
-    .form-wrapper {
-      background-color: #bfc9eb;
-      border-radius: 20px;
-      padding: 40px;
-      max-width: 700px;
-      margin: 40px auto;
-      box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
-    }
+.form-label {
+    color: #888;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
 
-    .form-label {
-      color: #888;
-      margin-bottom: 5px;
-      font-size: 14px;
-    }
+.form-control, .form-select {
+    border-radius: 50px;
+    border: none;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
 
-    .form-control, .form-select {
-      border-radius: 50px;
-      border: none;
-      padding: 10px 20px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
+.form-control:focus, .form-select:focus {
+    box-shadow: 0 0 0 0.15rem rgba(122,131,220,.25);
+}
 
-    .form-control:focus, .form-select:focus {
-      box-shadow: 0 0 0 0.15rem rgba(122,131,220,.25);
-    }
+.btn-simpan {
+    background-color: #7a83dc;
+    color: white;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+}
 
-    .btn-simpan {
-      background-color: #7a83dc;
-      color: white;
-      padding: 10px 40px;
-      border: none;
-      border-radius: 50px;
-      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-    }
-
-    .title {
-      text-align: center;
-      font-weight: bold;
-      color: #4b3a45;
-      margin-top: 40px;
-    }
+.title {
+    text-align: center;
+    font-weight: bold;
+    color: #4b3a45;
+    margin-top: 40px;
+}
     
-    /*input petugas*/
-    
-    .form-container {
-      max-width: 600px;
-      margin: 50px auto;
-      background-color: #b8c2e3;
-      border-radius: 20px;
-      padding: 30px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
+/*input petugas*/ 
+.form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #b8c2e3;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-    .form-label {
-      font-weight: 500;
-      color: #333;
-      font-size: 14px;
-      margin-bottom: 6px;
-    }
+.form-label {
+    font-weight: 500;
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
 
-    .form-control, .form-select {
-      border-radius: 25px;
-      font-size: 14px;
-      padding: 10px 18px;
-    }
+.form-control, .form-select {
+    border-radius: 25px;
+    font-size: 14px;
+    padding: 10px 18px;
+}
 
-    .btn-simpan {
-      border-radius: 25px;
-      padding: 8px 28px;
-      font-size: 14px;
-      background-color: #4357f1;
-      color: white;
-      border: none;
-      box-shadow: 0 4px 5px rgba(0,0,0,0.15);
-      transition: backgroun 0.3s ease;
-    }
+.btn-simpan {
+    border-radius: 25px;
+    padding: 8px 28px;
+    font-size: 14px;
+    background-color: #4357f1;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.15);
+    transition: backgroun 0.3s ease;
+}
 
-    .btn-simpan:hover {
-      background-color: #5c69ce;
-    }
+.btn-simpan:hover {
+    background-color: #5c69ce;
+}
 
-    h5 {
-      text-align: center;
-      font-weight: bold;
-      margin-bottom: 25px;
-      color: #3b3554;
-    }
+h5 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #3b3554;
+}
 
 
 /*detail jukir*/
+.card-custom {
+    background-color: #cfd6f1;
+    border-radius: 16px;
+    padding: 15px;
+    max-width: 650px;
+    margin: auto;
+}
 
- .card-custom {
-      background-color: #cfd6f1;
-      border-radius: 16px;
-      padding: 15px;
-      max-width: 650px;
-      margin: auto;
-    }
+.photo-placeholder {
+    width: 140px;
+    height: 160px;
+    background-color: #e1e1e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+    border-radius: 10px;
+    margin: auto;
+}
 
-    .photo-placeholder {
-      width: 140px;
-      height: 160px;
-      background-color: #e1e1e1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 64px;
-      border-radius: 10px;
-      margin: auto;
-    }
+.form-control {
+    border-radius: 15px;
+    font-size: 13px;
+    padding: 6px 10px;
+}
 
-    .form-control {
-      border-radius: 15px;
-      font-size: 13px;
-      padding: 6px 10px;
-    }
+.btn-primary {
+    border-radius: 15px;
+    padding: 6px 10px;
+    font-size: 14px;
+}
 
-    .btn-primary {
-      border-radius: 15px;
-      padding: 6px 10px;
-      font-size: 14px;
-    }
+.section-title {
+    color: #3b5adb;
+    font-weight: 600;
+    text-align: center;
+    font-size: 18px;
+}
 
-    .section-title {
-      color: #3b5adb;
-      font-weight: 600;
-      text-align: center;
-      font-size: 18px;
-    }
+.user-name {
+    font-weight: 600;
+    text-align: center;
+    margin-top: 8px;
+    font-size: 14px;
+}
 
-    .user-name {
-      font-weight: 600;
-      text-align: center;
-      margin-top: 8px;
-      font-size: 14px;
-    }
+.top-bar {
+    background: linear-gradient(to right, #5c81c5, #78a5e3);
+    padding: 8px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+}
 
-    .top-bar {
-      background: linear-gradient(to right, #5c81c5, #78a5e3);
-      padding: 8px 15px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: white;
-      font-size: 14px;
-    }
+.top-bar input {
+    width: 150px;
+    font-size: 13px;
+    border-radius: 15px;
+    padding: 4px 10px;
+}
 
-    .top-bar input {
-      width: 150px;
-      font-size: 13px;
-      border-radius: 15px;
-      padding: 4px 10px;
-    }
+/*Input data pengguna*/
+.form-container {
+    max-width: 500px;
+    margin: 60px auto;
+    background-color: #b8c7e6;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
 
-    /*Input data pengguna*/
-       .form-container {
-      max-width: 500px;
-      margin: 60px auto;
-      background-color: #b8c7e6;
-      padding: 40px 30px;
-      border-radius: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    }
+.form-label {
+    font-weight: 600;
+    color: #444;
+    font-size: 15px;
+}
 
-    .form-label {
-      font-weight: 600;
-      color: #444;
-      font-size: 15px;
-    }
+.form-control {
+    border-radius: 25px;
+    padding: 10px 16px;
+    font-size: 14px;
+    background-color: #ffffff;
+    border: none;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
 
-    .form-control {
-      border-radius: 25px;
-      padding: 10px 16px;
-      font-size: 14px;
-      background-color: #ffffff;
-      border: none;
-      box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
-    }
+h4 {
+    text-align: center;
+    font-weight: 700;
+    color: #4a64d9;
+    margin-bottom: 30px;
+}
 
-    h4 {
-      text-align: center;
-      font-weight: 700;
-      color: #4a64d9;
-      margin-bottom: 30px;
-    }
+.btn-custom {
+    border-radius: 25px;
+    padding: 10px 30px;
+    font-size: 14px;
+    background-color: #6c78d8;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
 
-      .btn-custom {
-      border-radius: 25px;
-      padding: 10px 30px;
-      font-size: 14px;
-      background-color: #6c78d8;
-      color: #fff;
-      border: none;
-      transition: background-color 0.3s ease;
-    }
+.btn-custom:hover {
+    background-color: #5a65c3;
+}
 
-    .btn-custom:hover {
-      background-color: #5a65c3;
-    }
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 25px;
+}
 
-    .btn-container {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 25px;
-    }
+/*detail lokasi*/
+.card-custom {
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-    /*detail lokasi*/
-    body {
-     background-color: #e3e8f7;
-    }
-      .card-custom {
-      background-color: white;
-      border-radius: 20px;
-      padding: 30px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    .title {
-      font-weight: bold;
-      color: #4e5bb0;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .label {
-      font-weight: 500;
-    }
+.title {
+    font-weight: bold;
+    color: #4e5bb0;
+    text-align: center;
+    margin-bottom: 30px;
+}
 
     /*output surat perintah*/
-  
+.label {
+    font-weight: 500;
+}
 
-    /*detail rekap data*/
-      .title {
-      text-align: center;
-      font-weight: bold;
-      color: #4b3a9b;
-      margin-top: 30px;
-      margin-bottom: 30px;
-    }
+/*output surat perintah*/
+.title {
+    text-align: center;
+    font-weight: bold;
+    color: #4b3a9b;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
 
-    .detail-box {
-      background-color: #bcc7f3;
-      color: #333;
-      border-radius: 20px;
-      padding: 10px 20px;
-      margin-bottom: 15px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+.data-box {
+    background-color: #aebbe9;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 750px;
+    margin: auto;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
 
-    .detail-label {
-      font-weight: 500;
-    }
+.data-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
 
-    .container-box {
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 20px;
-    }
+.label {
+    font-weight: 500;
+    color: #333;
+    min-width: 180px;
+}
+
+.value {
+    text-align: right;
+    color: #333;
+    flex: 1;
+    padding-left: 10px;
+}
+
+.btn-back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: #4b4b4b;
+    background: none;
+    border: none;
+}
+
+.btn-hapus {
+    background-color: #737ECF;
+    color: white;
+    border-radius: 20px;
+    padding: 5px 20px;
+    border: none;
+}
+
+th, td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+/*detail rekap data*/
+.title {
+    text-align: center;
+    font-weight: bold;
+    color: #4b3a9b;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.detail-box {
+    background-color: #bcc7f3;
+    color: #333;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detail-label {
+    font-weight: 500;
+}
+
+.container-box {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
 /* Pembuatan surat tugas*/
-    body {
-      background-color: #e7eaf4;
-      font-family: 'Segoe UI', sans-serif;
-      font-size: 14px;
-    }
+.form-card {
+    background-color: #cfd6f1;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
 
-    .form-card {
-      background-color: #cfd6f1;
-      padding: 30px;
-      border-radius: 20px;
-      max-width: 600px;
-      margin: auto;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-    }
+.form-control {
+    border-radius: 20px;
+    font-size: 14px;
+    padding: 10px 15px;
+}
 
-    .form-control {
-      border-radius: 20px;
-      font-size: 14px;
-      padding: 10px 15px;
-    }
+.form-select {
+    border-radius: 20px;
+    font-size: 14px;
+    padding: 10px 15px;
+}
 
-    .form-select {
-      border-radius: 20px;
-      font-size: 14px;
-      padding: 10px 15px;
-    }
+.btn-primary {
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: #5e64d6;
+    border: none;
+}
 
-    .btn-primary {
-      border-radius: 20px;
-      padding: 10px 20px;
-      background-color: #5e64d6;
-      border: none;
-    }
+.btn-primary:hover {
+    background-color: #4950c4;
+}
 
-    .btn-primary:hover {
-      background-color: #4950c4;
-    }
+h4 {
+    color: #3b5adb;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px;
+}
 
-    h4 {
-      color: #3b5adb;
-      font-weight: bold;
-      text-align: center;
-      margin-bottom: 5px;
-    }
+.subtitle {
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 30px;
+    color: #666;
+}
 
-    .subtitle {
-      text-align: center;
-      font-size: 13px;
-      margin-bottom: 30px;
-      color: #666;
-    }
+/*Pembuatan Surat Tanda Setor Bank*/
+.form-card {
+    background-color: #cfd6f1;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
 
-    /*Pembuatan Surat Tanda Setor Bank*/
-        body {
-      background-color: #e7eaf4;
-      font-family: 'Segoe UI', sans-serif;
-      font-size: 14px;
-    }
+.form-control {
+    border-radius: 20px;
+    font-size: 14px;
+    padding: 10px 15px;
+}
 
-    .form-card {
-      background-color: #cfd6f1;
-      padding: 30px;
-      border-radius: 20px;
-      max-width: 600px;
-      margin: auto;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-    }
+.form-select {
+    border-radius: 20px;
+    font-size: 14px;
+    padding: 10px 15px;
+}
 
-    .form-control {
-      border-radius: 20px;
-      font-size: 14px;
-      padding: 10px 15px;
-    }
+.btn-primary {
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: #5e64d6;
+    border: none;
+}
 
-    .form-select {
-      border-radius: 20px;
-      font-size: 14px;
-      padding: 10px 15px;
-    }
+.btn-primary:hover {
+    background-color: #4950c4;
+}
 
-    .btn-primary {
-      border-radius: 20px;
-      padding: 10px 20px;
-      background-color: #5e64d6;
-      border: none;
-    }
+h4 {
+    color: #3b5adb;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px;
+}
 
-    .btn-primary:hover {
-      background-color: #4950c4;
-    }
-
-    h4 {
-      color: #3b5adb;
-      font-weight: bold;
-      text-align: center;
-      margin-bottom: 5px;
-    }
-
-    .subtitle {
-      text-align: center;
-      font-size: 13px;
-      margin-bottom: 30px;
-      color: #666;
-    }
+.subtitle {
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 30px;
+    color: #666;
+}
