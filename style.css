@@ -688,6 +688,7 @@ h4 {
 }
 
     /*output surat perintah*/
+<<<<<<< Updated upstream
 .label {
     font-weight: 500;
 }
@@ -747,6 +748,9 @@ h4 {
     padding: 5px 20px;
     border: none;
 }
+=======
+  
+>>>>>>> Stashed changes
 
 th, td {
     vertical-align: middle;
