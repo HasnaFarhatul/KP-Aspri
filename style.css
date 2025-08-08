@@ -333,30 +333,30 @@ th {
 }
 
 /*buktisetoran */
-.info-container {
-    width: 400px;
-    margin: 0 auto; 
+ .info-container {
+    width: 400px; 
+    margin: 0 auto;
     font-family: Arial, sans-serif;
-}
+  }
 
-  .info-row {
-  display: flex;
-  padding: 4px 0;
-  justify-content: center; 
+.info-row {
+    display: flex;
+    padding: 4px 0;
+    justify-content: center; 
 }
 
 .label-info {
-    width: 140px;
+    width: 140px; 
     font-weight: 600;
     text-align: left;
     padding-right: 8px;
     white-space: nowrap; 
-}
+  }
 
 .value-info {
     flex-grow: 1; 
     text-align: left;
-    word-wrap: break-word;
+    word-wrap: break-word; 
 }
 
 .btn-custom-purple {
@@ -394,6 +394,18 @@ h4.title {
 
 h4.title::after {
     content: ''; 
+    width: 50px;
+    height: 3px;
+    background-color: #737ecf;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+
+h4.title::after {
+    content: '';
     width: 50px;
     height: 3px;
     background-color: #737ecf;
@@ -510,7 +522,7 @@ textarea.form-control {
     margin-top: 40px;
 }
     
-/*input petugas*/ 
+/*input petugas*/
 .form-container {
     max-width: 600px;
     margin: 50px auto;
@@ -554,7 +566,6 @@ h5 {
     margin-bottom: 25px;
     color: #3b3554;
 }
-
 
 /*detail jukir*/
 .card-custom {
@@ -624,7 +635,7 @@ h5 {
 .form-container {
     max-width: 500px;
     margin: 60px auto;
-    background-color: #b8c7e6;
+    background-color: #b8c7e6; 
     padding: 40px 30px;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
@@ -686,6 +697,10 @@ h4 {
     color: #4e5bb0;
     text-align: center;
     margin-bottom: 30px;
+}
+
+.label {
+    font-weight: 500;
 }
 
 /*output surat perintah*/
@@ -813,7 +828,7 @@ th, td {
 }
 
 h4 {
-    color: #3b5adb;
+     color: #3b5adb;
     font-weight: bold;
     text-align: center;
     margin-bottom: 5px;
