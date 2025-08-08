@@ -255,6 +255,10 @@ body {
     font-size: 0.95rem;
 }
 
+.btn-purple-ish {
+    background-color: rgb(115, 126, 207);
+}
+
 .card p,
 .card .fw-semibold {
     font-size: 0.85rem;
@@ -602,16 +606,14 @@ h5 {
 
 .section-title {
     color: #3b5adb;
-    font-weight: 600;
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .user-name {
     font-weight: 600;
     text-align: center;
-    margin-top: 8px;
-    font-size: 14px;
+    font-size: 30spx;
 }
 
 .top-bar {

@@ -37,35 +37,42 @@
             <a href="../Admin/datalokasi.html"><img src="../foto/location_on.png" alt="Logout" title="Data Lokasi"/></a>
         </div>
     </div>
-    <div class="container py-5 mt-5">
+    <div class="container py-5 m-5">
         <h4 class="text-center fw-bold mb-4">Informasi Pribadi</h4>
         <div class="bg-light rounded-4 p-5 shadow-sm" style="background-color: #b8c2e0;">
-            <form>
+            <form id="profileForm">
                 <div class="row mb-4 align-items-center">
-                    <label class="col-sm-3 col-form-label">Username</label>
+                    <label class="col-sm-3 fw-semibold">Username</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control custom-input" value="hasna123">
+                        <input type="text" class="form-control" value="admin" disabled>
                     </div>
                 </div>
                 <div class="row mb-4 align-items-center">
-                    <label class="col-sm-3 col-form-label">Password</label>
+                    <label class="col-sm-3 fw-semibold">Password</label>
                     <div class="col-sm-9">
-                        <input type="password" class="form-control custom-input" value="••••••••">
+                        <input type="password" class="form-control" value="••••••••" disabled>
                     </div>
                 </div>
                 <div class="row mb-4 align-items-center">
-                    <label class="col-sm-3 col-form-label">Nama</label>
+                    <label class="col-sm-3 fw-semibold">Nama</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control custom-input" value="Hasna Farhatul">
+                        <input type="text" class="form-control" value="atcs" disabled>
                     </div>
                 </div>
                 <div class="row mb-4 align-items-center">
-                    <label class="col-sm-3 col-form-label">Jabatan</label>
+                    <label class="col-sm-3 fw-semibold">Jabatan</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control custom-input" value="Administrator">
+                        <input type="text" class="form-control" value="Administrator" disabled>
                     </div>
+                </div>
+                <div class="text-center">
+                    <button type="button" id="editBtn" class="btn btn-primary px-4">Edit</button>
+                    <button type="submit" id="saveBtn" class="btn btn-success px-4 d-none">Simpan</button>
                 </div>
             </form>
+        </div>
+        <div class="text-center mt-4">
+            <a href="logout.html" class="btn btn-danger px-5">Logout</a>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

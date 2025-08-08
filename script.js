@@ -7,6 +7,25 @@ isMenuOpen = !isMenuOpen;
 menu.style.maxWidth = isMenuOpen ? "600px" : "0";
 }
 
+//detail profil
+const editBtn = document.getElementById('editBtn');
+const saveBtn = document.getElementById('saveBtn');
+const inputs = document.querySelectorAll('#profileForm input');
+
+editBtn.addEventListener('click', () => {
+    inputs.forEach(input => input.removeAttribute('disabled'));
+    editBtn.classList.add('d-none');
+    saveBtn.classList.remove('d-none');
+});
+
+document.getElementById('profileForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    inputs.forEach(input => input.setAttribute('disabled', true));
+    editBtn.classList.remove('d-none');
+    saveBtn.classList.add('d-none');
+    alert('Data berhasil disimpan!');
+});
+
 //kalender
 const bulan = [
     { nama: "JULI 2025", jumlahHari: 31, mulaiHari: 1 },
