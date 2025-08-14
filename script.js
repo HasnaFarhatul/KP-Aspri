@@ -27,24 +27,13 @@ document.getElementById('profileForm').addEventListener('submit', (e) => {
 });
 
 //kalender
-const bulan = [
-    { nama: "JULI 2025", jumlahHari: 31, mulaiHari: 1 },
-    { nama: "AGUSTUS 2025", jumlahHari: 31, mulaiHari: 5 }, 
-    { nama: "SEPTEMBER 2025", jumlahHari: 30, mulaiHari: 0 }
-];
-const pendapatanData = {
-    "2025-08-01": 50000,
-    "2025-08-02": 60000,
-    "2025-08-03": 45000,
-    "2025-08-04": 70000,
-    "2025-08-05": 55000
-};
-let currentMonthIndex = 1;
-
 function renderCalendar() {
     const grid = document.getElementById("calendarGrid");
     grid.innerHTML = "";
     const bulanIni = bulan[currentMonthIndex];
+    const monthNumber = String(currentMonthIndex + 7).padStart(2, '0'); 
+    // +7 karena index 0 = Juli (07), 1 = Agustus (08), dst
+
     document.getElementById("monthTitle").textContent = bulanIni.nama;
 
     const totalCell = bulanIni.mulaiHari;
@@ -55,10 +44,11 @@ function renderCalendar() {
         kosong.style.boxShadow = "none";
         grid.appendChild(kosong);
     }
+
     let totalPendapatan = 0;
 
-      for (let tanggal = 1; tanggal <= bulanIni.jumlahHari; tanggal++) {
-        const fullDate = `2025-0${currentMonthIndex + 1}-${String(tanggal).padStart(2, '0')}`;
+    for (let tanggal = 1; tanggal <= bulanIni.jumlahHari; tanggal++) {
+        const fullDate = `2025-${monthNumber}-${String(tanggal).padStart(2, '0')}`;
         const pendapatan = pendapatanData[fullDate];
 
         const box = document.createElement("div");
@@ -75,21 +65,16 @@ function renderCalendar() {
           totalPendapatan += pendapatan;
         } else {
           income.classList.add("no-income");
+          income.textContent = "-";
         }
 
         box.appendChild(day);
         box.appendChild(income);
         grid.appendChild(box);
-      }
-  document.getElementById("totalPendapatan").textContent = `Rp ${totalPendapatan.toLocaleString()}`;
+    }
+    document.getElementById("totalPendapatan").textContent = `Rp ${totalPendapatan.toLocaleString()}`;
 }
-function changeMonth(offset) {
-    currentMonthIndex += offset;
-    if (currentMonthIndex < 0) currentMonthIndex = 0;
-    if (currentMonthIndex > 2) currentMonthIndex = 2;
-    renderCalendar();
-}
-renderCalendar();
+
 
 //setoran harian
 const dataPendapatan = [
@@ -160,3 +145,59 @@ function filterDataByDate() {
     }
     
     filterData('all');
+
+// daftar juru parkir
+(function(){
+  const row = document.querySelector('.container .row.g-4');
+  if (!row) return;
+
+  // Buat col untuk ikon panah
+  const colPanah = document.createElement('div');
+  colPanah.className = 'col-12 col-md-4 d-flex justify-content-center';
+
+  // Tombol transparan
+  const btnPanah = document.createElement('button');
+  btnPanah.type = 'button';
+  btnPanah.className = 'btn btn-sm';
+  btnPanah.style.background = 'transparent';
+  btnPanah.style.border = 'none';
+  btnPanah.style.padding = '0';
+
+  // Gambar panah
+  const imgPanah = document.createElement('img');
+  imgPanah.src = '../foto/lainnya.png'; // lokasi file kamu
+  imgPanah.alt = 'Tampilkan lebih banyak';
+  imgPanah.style.width = '40px';
+  imgPanah.style.height = '40px';
+
+  btnPanah.appendChild(imgPanah);
+  colPanah.appendChild(btnPanah);
+
+  // Masukkan di akhir row
+  row.appendChild(colPanah);
+
+  function appendClones() {
+    const cols = Array.from(row.querySelectorAll(':scope > .col-12'));
+    if (cols.length === 0) return;
+
+    const frag = document.createDocumentFragment();
+    cols.forEach(col => {
+      if (col !== colPanah) { // jangan ikut clone tombol panah
+        const clone = col.cloneNode(true);
+        frag.appendChild(clone);
+      }
+    });
+    row.insertBefore(frag, colPanah);
+  }
+
+  btnPanah.addEventListener('click', () => {
+    imgPanah.style.opacity = '0.5';
+    btnPanah.disabled = true;
+    setTimeout(() => {
+      appendClones();
+      btnPanah.disabled = false;
+      imgPanah.style.opacity = '1';
+    }, 150);
+  });
+
+})();
