@@ -27,53 +27,66 @@ document.getElementById('profileForm').addEventListener('submit', (e) => {
 });
 
 //kalender
-function renderCalendar() {
-    const grid = document.getElementById("calendarGrid");
-    grid.innerHTML = "";
-    const bulanIni = bulan[currentMonthIndex];
-    const monthNumber = String(currentMonthIndex + 7).padStart(2, '0'); 
-    // +7 karena index 0 = Juli (07), 1 = Agustus (08), dst
+const bulan = [
+  { nama: "JULI 2025", jumlahHari: 31, mulaiHari: 1 },
+  { nama: "AGUSTUS 2025", jumlahHari: 31, mulaiHari: 5 },
+  { nama: "SEPTEMBER 2025", jumlahHari: 30, mulaiHari: 0 }
+];
 
-    document.getElementById("monthTitle").textContent = bulanIni.nama;
+const pendapatanData = {
+  "2025-08-01": 50000,
+  "2025-08-02": 75000,
+  "2025-08-05": 100000,
+  "2025-08-15": 125000,
+  "2025-08-25": 200000
+};
 
-    const totalCell = bulanIni.mulaiHari;
-    for (let i = 0; i < totalCell; i++) {
-        const kosong = document.createElement("div");
-        kosong.classList.add("day-box");
-        kosong.style.backgroundColor = "transparent";
-        kosong.style.boxShadow = "none";
-        grid.appendChild(kosong);
-    }
+let bulanAktif = 1; // default Agustus
 
-    let totalPendapatan = 0;
+function renderKalender() {
+  const calendarDays = document.getElementById("calendarDays");
+  const monthYear = document.getElementById("monthYear");
+  const totalPendapatan = document.getElementById("totalPendapatan");
 
-    for (let tanggal = 1; tanggal <= bulanIni.jumlahHari; tanggal++) {
-        const fullDate = `2025-${monthNumber}-${String(tanggal).padStart(2, '0')}`;
-        const pendapatan = pendapatanData[fullDate];
+  calendarDays.innerHTML = "";
+  let bulanSekarang = bulan[bulanAktif];
+  monthYear.textContent = bulanSekarang.nama;
 
-        const box = document.createElement("div");
-        box.classList.add("day-box");
+  let total = 0;
 
-        const day = document.createElement("div");
-        day.classList.add("day-number");
-        day.textContent = tanggal;
+  // kotak kosong sebelum tanggal 1
+  for (let i = 0; i < bulanSekarang.mulaiHari; i++) {
+    calendarDays.innerHTML += `<div></div>`;
+  }
 
-        const income = document.createElement("div");
-        income.classList.add("income");
-        if (pendapatan) {
-          income.textContent = `Rp ${pendapatan.toLocaleString()}`;
-          totalPendapatan += pendapatan;
-        } else {
-          income.classList.add("no-income");
-          income.textContent = "-";
-        }
+  // render tanggal
+  for (let t = 1; t <= bulanSekarang.jumlahHari; t++) {
+    const key = `2025-${String(bulanAktif + 7).padStart(2, "0")}-${String(t).padStart(2, "0")}`;
+    const income = pendapatanData[key] || 0;
+    total += income;
 
-        box.appendChild(day);
-        box.appendChild(income);
-        grid.appendChild(box);
-    }
-    document.getElementById("totalPendapatan").textContent = `Rp ${totalPendapatan.toLocaleString()}`;
+    calendarDays.innerHTML += `
+      <div class="day-box">
+        <div class="day-number">${t}</div>
+        <div class="income">${income > 0 ? "Rp " + income.toLocaleString() : ""}</div>
+      </div>
+    `;
+  }
+
+  totalPendapatan.textContent = `Total Pendapatan: Rp ${total.toLocaleString()}`;
 }
+
+document.getElementById("prevMonth").addEventListener("click", () => {
+  bulanAktif = (bulanAktif - 1 + bulan.length) % bulan.length;
+  renderKalender();
+});
+
+document.getElementById("nextMonth").addEventListener("click", () => {
+  bulanAktif = (bulanAktif + 1) % bulan.length;
+  renderKalender();
+});
+
+renderKalender();
 
 
 //setoran harian
