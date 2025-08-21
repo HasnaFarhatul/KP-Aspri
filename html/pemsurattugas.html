@@ -30,32 +30,40 @@
             <a href="jukir.html"><img src="../foto/accessibility.png" alt="Profile" title="Juru Parkit"/></a>
             <a href="KRinput.html"><img src="../foto/Check circle.png" alt="Logout" title="Kasbon Retribusi"/></a>
             <a href="pemsurattugas.html"><img src="../foto/File.png" alt="Logout" title="Pembuatan Surat Tugas"/></a>
-            <a href="#"><img src="../foto/Book open.png" alt="Logout" title=""/></a>
+            <div class="btn-group dropend">
+                <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="../foto/Book open.png" alt="Laporan Pendapatan" title="Laporan Pendapatan"/>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="LPkalender.html">Kalender Setoran</a></li>
+                    <li><a class="dropdown-item" href="LPsetoranharian.html">Setoran Harian</a></li>
+                </ul>
+            </div>
             <a href="../Admin/datajukir.html"><img src="../foto/User plus.png" alt="Logout" title="Data Juru Parkir"/></a>
-            <a href="../Admin/datapengguna.html"><img src="../foto/Users.png" alt="Logout" title="Data Pengguna"/></a>
-            <a href="../Admin/rekapdata.html"><img src="../foto/Clipboard.png" alt="Logout" title="Recap Data"/></a>
+            <a href="../Admin/datapengguna.html"><img src="../foto/Users.png" alt="Logout" title="Data Pengguna Aplikasi"/></a>
+            <a href="../Admin/rekapdata.html"><img src="../foto/Clipboard.png" alt="Logout" title="Rekap Data Kolektor"/></a>
             <a href="../Admin/datalokasi.html"><img src="../foto/location_on.png" alt="Logout" title="Data Lokasi"/></a>
         </div>
     </div>
-    <div class="container py-5 mt-5">
+    <div class="container py-5">
         <h4 class="judull">Buat Surat Perintah untuk Juru Parkir</h4>
-        <p class="subtitle">Masukkan data lengkap untuk membuat surat tugas</p>
+        <p class="subtitle1">Masukkan data lengkap untuk membuat surat tugas</p>
         <div class="form-card1">
             <form>
                 <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Nomor Surat" required>
+                    <input type="text" class="form-control1" placeholder="Nomor Surat" required>
                 </div>
                 <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Nama Juru Parkir" required>
+                    <input type="text" class="form-control1" placeholder="Nama Juru Parkir" required>
                 </div>
                 <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Tempat/tanggal lahir" required>
+                    <input type="text" class="form-control1" placeholder="Tempat/tanggal lahir" required>
                 </div>
                 <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Alamat" required>
+                    <input type="text" class="form-control1" placeholder="Alamat" required>
                 </div>
                 <div class="mb-4">
-                    <select class="form-select" required>
+                    <select class="form-select1" required>
                         <option value="">Lokasi</option>
                         <option value="lokasi1">Jl. KHZ. Mustafa</option>
                         <option value="lokasi2">Jl. Sudirman</option>
@@ -64,7 +72,7 @@
                 </div>
                 <div class="d-grid justify-content-center">
                     <a href="outputsuratperintah.html">
-                        <button type="submit" class="btn btn-primary">Buat Surat Tugas Parkir</button>
+                        <button type="submit" class="btn btn-primary1">Buat Surat Tugas Parkir</button>
                     </a>
                 </div>
             </form>

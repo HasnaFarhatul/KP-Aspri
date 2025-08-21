@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Kolektor</title>
+    <title>Detail Kolektor</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
     <link href="../style.css" rel="stylesheet" />
@@ -23,58 +23,49 @@
             </a>
         </div>
     </nav>
-    <div class="menu-container">
-        <button class="menu-toggle" onclick="toggleMenu()"><img src="../foto/menu.png"/></button>
-        <div class="menu-items" id="menuItems">
-            <a href="../html/dashboard.html"><img src="../foto/Home.png" alt="Home" title="Dashboard" /></a>
-            <a href="../html/jukir.html"><img src="../foto/accessibility.png" alt="Profile" title="Juru Parkit"/></a>
-            <a href="../html/KRinput.html"><img src="../foto/Check circle.png" alt="Logout" title="Kasbon Retribusi"/></a>
-            <a href="../html/pemsurattugas.html"><img src="../foto/File.png" alt="Logout" title="Pembuatan Surat Tugas"/></a>
-            <a href="#"><img src="../foto/Book open.png" alt="Logout" title=""/></a>
-            <a href="datajukir.html"><img src="../foto/User plus.png" alt="Logout" title="Data Juru Parkir"/></a>
-            <a href="datapengguna.html"><img src="../foto/Users.png" alt="Logout" title="Data Pengguna"/></a>
-            <a href="rekapdata.html"><img src="../foto/Clipboard.png" alt="Logout" title="Recap Data"/></a>
-            <a href="datalokasi.html"><img src="../foto/location_on.png" alt="Logout" title="Data Lokasi"/></a>
-        </div>
+    <div class="container mt-4 ms-2">
+        <a href="rekapdata.html" class="btn-kembali">
+            <img src="../foto/cancel.png" alt="Kembali" title="Kembali">
+        </a>
     </div>
     <div class="container-box">
-        <h4 class="title">Detail Data Kolektor</h4>
-            <div class="detail-box">
-                <div class="label">ID Kolektor</div>
-                <div class="value">KOL-007</div>
-            </div>
-            <div class="detail-box">
-                <div class="label">Nama Kolektor</div>
-                <div class="value">Muksin</div>
-            </div>
-            <div class="detail-box">
-                <div class="label">Lokasi Bertugas</div>
-                <div class="value">Jl. HZ Mustafa No.12, Kecamatan Cihideung</div>
-            </div>
-            <div class="detail-box">
-                <div class="label">Periode Tugas</div>
-                <div class="value">01 Juli 2025 – 30 Juli 2025</div>
-            </div>
-            <div class="detail-box">
-                <span class="detail-label">Total Hari Aktif</span>
-                <span>: 26 hari kerja</span>
-            </div>
-            <div class="detail-box">
-                <span class="detail-label">Jumlah Setoran</span>
-                <span>: Rp 3.500.000</span>
-            </div>
-            <div class="detail-box">
-                <span class="detail-label">Jumlah Transaksi</span>
-                <span>: 1.305 transaksi</span>
-            </div>
-            <div class="detail-box">
-                <span class="detail-label">Rata-rata Setoran/Hari</span>
-                <span>: Rp 250.000</span>
-            </div>
-            <div class="detail-box">
-                <span class="detail-label">Status Kolektor</span>
-                <span>: Aktif</span>
-            </div>
+        <h4 class="titlerd">Detail Kolektor</h4>
+        <div class="detail-box">
+            <div class="label">ID Kolektor</div>
+            <div class="value">KOL-007</div>
+        </div>
+        <div class="detail-box">
+            <div class="label">Nama Kolektor</div>
+            <div class="value">Muksin</div>
+        </div>
+        <div class="detail-box">
+            <div class="label">Lokasi Bertugas</div>
+            <div class="value">Jl. HZ Mustafa No.12, Kecamatan Cihideung</div>
+        </div>
+        <div class="detail-box">
+            <div class="label">Periode Tugas</div>
+            <div class="value">01 Juli 2025 – 30 Juli 2025</div>
+        </div>
+        <div class="detail-box">
+            <div class="label">Total Hari Aktif</div>
+            <div class="value">26 hari kerja</div>
+        </div>
+        <div class="detail-box">
+            <div class="label">Jumlah Setoran</div>
+            <div class="value">Rp 3.500.000</div>
+        </div>
+        <div class="detail-box">
+            <div class="label">Jumlah Transaksi</div>
+            <div class="value">1.305 transaksi</div>
+        </div>
+        <div class="detail-box">
+            <div class="label">Rata-rata Setoran/Hari</div>
+            <div class="value">Rp 250.000</div>
+        </div>
+        <div class="detail-box">
+            <div class="label">Status Kolektor</div>
+            <div class="value">Aktif</div>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../script.js"></script>
