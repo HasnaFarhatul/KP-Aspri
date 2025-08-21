@@ -27,66 +27,79 @@ document.getElementById('profileForm').addEventListener('submit', (e) => {
 });
 
 //kalender
-const bulan = [
-  { nama: "JULI 2025", jumlahHari: 31, mulaiHari: 1 },
-  { nama: "AGUSTUS 2025", jumlahHari: 31, mulaiHari: 5 },
-  { nama: "SEPTEMBER 2025", jumlahHari: 30, mulaiHari: 0 }
-];
+const monthNames = [
+      "Januari","Februari","Maret","April","Mei","Juni",
+      "Juli","Agustus","September","Oktober","November","Desember"
+    ];
+    let currentDate = new Date(2025, 7); // Agustus 2025 (index bulan 7)
 
-const pendapatanData = {
-  "2025-08-01": 50000,
-  "2025-08-02": 75000,
-  "2025-08-05": 100000,
-  "2025-08-15": 125000,
-  "2025-08-25": 200000
-};
+    const monthlyIncome = {
+      Januari: 120000,
+      Februari: 150000,
+      Maret: 170000,
+      April: 200000,
+      Mei: 180000,
+      Juni: 160000,
+      Juli: 190000,
+      Agustus: 250000,
+      September: 220000,
+      Oktober: 210000,
+      November: 230000,
+      Desember: 300000
+    };
 
-let bulanAktif = 1; // default Agustus
+    function renderCalendar(date) {
+      const month = date.getMonth();
+      const year = date.getFullYear();
+      document.getElementById("monthYear").innerText = monthNames[month] + " " + year;
 
-function renderKalender() {
-  const calendarDays = document.getElementById("calendarDays");
-  const monthYear = document.getElementById("monthYear");
-  const totalPendapatan = document.getElementById("totalPendapatan");
+      const firstDay = new Date(year, month, 1).getDay();
+      const daysInMonth = new Date(year, month+1, 0).getDate();
 
-  calendarDays.innerHTML = "";
-  let bulanSekarang = bulan[bulanAktif];
-  monthYear.textContent = bulanSekarang.nama;
+      const calendarDays = document.getElementById("calendarDays");
+      calendarDays.innerHTML = "";
 
-  let total = 0;
+      let total = 0;
 
-  // kotak kosong sebelum tanggal 1
-  for (let i = 0; i < bulanSekarang.mulaiHari; i++) {
-    calendarDays.innerHTML += `<div></div>`;
-  }
+      // Kotak kosong sebelum tanggal 1
+      for (let i = 0; i < firstDay; i++) {
+        calendarDays.innerHTML += `<div class="day-empty"></div>`;
+      }
 
-  // render tanggal
-  for (let t = 1; t <= bulanSekarang.jumlahHari; t++) {
-    const key = `2025-${String(bulanAktif + 7).padStart(2, "0")}-${String(t).padStart(2, "0")}`;
-    const income = pendapatanData[key] || 0;
-    total += income;
+      // Isi tanggal
+      for (let d = 1; d <= daysInMonth; d++) {
+        let pendapatan = "";
+        let highlight = "";
+        if (d <= 5) {
+          highlight = "highlight";
+          pendapatan = `<div class="income">Rp ${(d*10000).toLocaleString()}</div>`;
+          total += d*10000;
+        }
+        calendarDays.innerHTML += `<div class="day-box ${highlight}">${d}${pendapatan}</div>`;
+      }
 
-    calendarDays.innerHTML += `
-      <div class="day-box">
-        <div class="day-number">${t}</div>
-        <div class="income">${income > 0 ? "Rp " + income.toLocaleString() : ""}</div>
-      </div>
-    `;
-  }
+      document.getElementById("totalIncome").innerText = "Total Pendapatan: Rp " + total.toLocaleString();
+    }
 
-  totalPendapatan.textContent = `Total Pendapatan: Rp ${total.toLocaleString()}`;
-}
+    function prevMonth() {
+      currentDate.setMonth(currentDate.getMonth() - 1);
+      renderCalendar(currentDate);
+    }
+    function nextMonth() {
+      currentDate.setMonth(currentDate.getMonth() + 1);
+      renderCalendar(currentDate);
+    }
 
-document.getElementById("prevMonth").addEventListener("click", () => {
-  bulanAktif = (bulanAktif - 1 + bulan.length) % bulan.length;
-  renderKalender();
-});
+    function showPopup() {
+      const yearlyList = document.getElementById("yearlyIncome");
+      yearlyList.innerHTML = "";
+      for (const [bulan, pendapatan] of Object.entries(monthlyIncome)) {
+        yearlyList.innerHTML += `<li>${bulan}: Rp ${pendapatan.toLocaleString()}</li>`;
+      }
+      new bootstrap.Modal(document.getElementById('popupModal')).show();
+    }
 
-document.getElementById("nextMonth").addEventListener("click", () => {
-  bulanAktif = (bulanAktif + 1) % bulan.length;
-  renderKalender();
-});
-
-renderKalender();
+    renderCalendar(currentDate);
 
 
 //setoran harian
@@ -214,3 +227,4 @@ function filterDataByDate() {
   });
 
 })();
+

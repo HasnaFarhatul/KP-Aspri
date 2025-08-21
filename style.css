@@ -223,16 +223,27 @@ body {
 .box-title {
     font-size: 15px;
     font-weight: bold;
+    color: white;
 }
 
 .box-value {
     font-size: 18px;
     margin-bottom: 5px;
+    color: white;
 }
 
 .box-sub {
     font-size: 13px;
     margin-bottom: 10px;
+}
+
+.gradient-box-small > div {
+    display: flex;
+    flex-direction: column;  /* susun box-title dan box-value vertikal */
+    justify-content: center; /* vertikal di tengah */
+    align-items: flex-start; /* teks rata kiri */
+    height: 100%;            /* ambil tinggi penuh dari gradient-box-small */
+    padding: 10px;           /* opsional, biar ada jarak dari pinggir */
 }
 
 .gradient-box hr {
@@ -241,47 +252,12 @@ body {
     margin: 10px 0;
 }
 
-/* kalender */
-.calendar {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 12px;
+.d-flex {
+    display: flex !important;
 }
 
-.day-box {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 5px;
-    text-align: center;
-    min-height: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-size: 14px;
-}
-
-.day-number {
-    font-weight: 600;
-}
-
-.income {
-    font-size: 0.8rem;
-    margin-top: 5px;
-    color: #fff;
-    background-color: #4b7bec;
-    border-radius: 8px;
-    padding: 2px 6px;
-    display: inline-block;
-}
-
-.no-income {
-    visibility: hidden;
-}
-
-.month-nav {
-    cursor: pointer;
-    font-weight: bold;
-    color: #4b7bec;
+.justify-content-between {
+    justify-content: space-between !important;
 }
 
 /* Jukir */
